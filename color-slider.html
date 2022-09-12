@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color slider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="slider-wrapper">
+          <div id="color" class="result-color">
+            <p id="color-rgb"></p>
+          </div>
+          <div class="color-slider">
+            <div class="red">
+              <span>Red</span>
+              <input
+                id="red"
+                type="range"
+                min="0"
+                max="255"
+                value="0"
+                oninput="changeColor()"
+              />
+            </div>
+            <div class="green">
+              <p>Green</p>
+              <input
+                id="green"
+                type="range"
+                min="0"
+                max="255"
+                value="0"
+                oninput="changeColor()"
+              />
+            </div>
+            <div class="blue">
+              <p>Blue</p>
+              <input
+                id="blue"
+                type="range"
+                min="0"
+                max="255"
+                value="0"
+                oninput="changeColor()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video controller</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+      integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="video-wrapper">
+        <div class="video-screen">
+          <video
+            id="my-video"
+            src="./assets/videos/frozen.mp4"
+            width="100%"
+          ></video>
+        </div>
+        <div class="video-controls">
+          <div class="video-timeline">
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              class="slider"
+              id="video-length"
+              onchange="vidSeek()"
+              ontimeupdate="anyfunc()"
+            />
+            <span id="video-duration"></span>
+          </div>
+          <div class="video-control-btns">
+            <div class="play btns-margin">
+              <input
+                id="play"
+                class="btn"
+                type="button"
+                value="play"
+                onclick="playVid()"
+              />
+            </div>
+            <div class="pause btns-margin">
+              <input
+                id="pause"
+                class="btn"
+                type="button"
+                value="pause"
+                onclick="pauseVid()"
+              />
+            </div>
+            <div class="stop btns-margin">
+              <input
+                id="stop"
+                class="btn"
+                type="button"
+                value="stop"
+                onclick="stopVid()"
+              />
+            </div>
+            <div class="reset btns-margin">
+              <input
+                id="reset"
+                class="btn"
+                type="button"
+                value="<<"
+                onclick="resetVid()"
+              />
+            </div>
+            <div class="back-five btns-margin">
+              <input
+                id="back-five"
+                class="btn"
+                type="button"
+                value="<"
+                onclick="backFive()"
+              />
+            </div>
+            <div class="forward-five btns-margin">
+              <input
+                id="forward-five"
+                class="btn"
+                type="button"
+                value=">"
+                onclick="ForwardFive()"
+              />
+            </div>
+            <div class="next btns-margin">
+              <input
+                id="next"
+                class="btn"
+                type="button"
+                value=">>"
+                onclick="nextVid()"
+              />
+            </div>
+            <div class="volume btns-margin">
+              <input
+                id="volume"
+                min="0"
+                max="1"
+                type="range"
+                value="1"
+                oninput="changeVolume()"
+              />
+            </div>
+            <div class="mute btns-margin">
+              <input
+                id="mute"
+                class="btn"
+                type="button"
+                value="mute"
+                onclick="muteVid()"
+              />
+            </div>
+            <div class="speed btns-margin">
+              <input
+                id="speed"
+                min="0.5"
+                max="1.5"
+                step="0.5"
+                type="range"
+                value="1"
+                oninput="changePlayBackSpeed()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/script2.js"></script>
+  </body>
+</html>
